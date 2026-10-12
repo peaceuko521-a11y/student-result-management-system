@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result</title>
+</head>
+<body>
+
+    <h1>Student Result</h1>
+
+    <p><strong>Name:</strong> {{ student["name"] }}</p>
+    <p><strong>Matric Number:</strong> {{ student["matric_number"] }}</p>
+    <p><strong>Department:</strong> {{ student["department"] }}</p>
+<p><strong>Level:</strong> {{ student["level"] }} Level</p>
+
+    <h2>Course Results</h2>
+
+    <table border="1">
+        <tr>
+            <th>Semester</th>
+            <th>Course Code</th>
+            <th>Course Title</th>
+            <th>Units</th>
+            <th>Score</th>
+            <th>Grade</th>
+            <th>Grade Point</th>
+        </tr>
+
+        {% for result in results %}
+        <tr>
+            <td>{{ result["semester"] }}</td>
+            <td>{{ result["course_code"] }}</td>
+            <td>{{ result["course_title"] }}</td>
+            <td>{{ result["units"] }}</td>
+            <td>{{ result["score"] }}</td>
+            <td>{{ result["grade"] }}</td>
+            <td>{{ result["grade_point"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>GPA: {{ "%.2f"|format(gpa) }}</h2>
+    <p><strong>Rank:</strong> {{ rank }} out of {{ total_students }}</p>
+
+
+</body>
+</html>
