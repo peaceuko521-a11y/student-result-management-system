@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f3;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+header {
+    background: #123d2a;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    border-bottom: 4px solid #a6c69b;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #e0eadf;
+}
+
+main {
+    width: 92%;
+    max-width: 700px;
+    margin: 45px auto;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    border: 1px solid #dce6dd;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(18, 61, 42, 0.08);
+}
+
+h2 {
+    color: #123d2a;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0 20px;
+    border: 1px solid #cbd8ce;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid #387653;
+}
+
+button {
+    background: #185638;
+    color: white;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0e3c26;
+}
+
+footer {
+    text-align: center;
+    color: #647368;
+    padding: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    main {
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Student results page */
+.student-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.info-item {
+    background: #f3f6f3;
+    padding: 14px;
+    border-left: 3px solid #185638;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+}
+
+.info-item strong {
+    display: block;
+    color: #185638;
+    margin-bottom: 4px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin: 20px 0;
+}
+
+.results-table th {
+    background: #185638;
+    color: white;
+    text-align: left;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px;
+    border: 1px solid #dce6dd;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background: #f0f5f0;
+}
+
+.gpa-summary {
+    background: #e8f2e8;
+    color: #123d2a;
+    border-left: 5px solid #185638;
+    border-radius: 5px;
+    padding: 18px;
+    margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+    .student-info {
+        grid-template-columns: 1fr;
+    }
+
+    .results-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
