@@ -2,22 +2,31 @@
 <html>
     <head>
         <title>Student Result System</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
- <body>
-        <h1>Student Result Management System
-    </h1>
+    <body>
+        <h1>Student Result Management System</h1>
        
         <p>Enter matric number to check your result.</p>
+<main>
+    <section>
+            <form action="/result" method="post">
+                <label for="matric_number">Matric Number</label>
 
-        <form action="/result" method="post">
-        
-            <input type="text" 
-            name="matric_number" placeholder="Enter matric number" required>
+                <input
+                    type="text"
+                    id="matric_number"
+                    name="matric_number"
+                    placeholder="Enter matric number"
+                    required
+                >
 
-        <button type="submit">Submit</button>
-        </form>
-   
+                <button type="submit">View Results</button>
+            </form>
+        </section>
+    </main>
+
 </body>
 </html>
